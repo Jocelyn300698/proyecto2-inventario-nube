@@ -1,0 +1,53 @@
+# ===== Credenciales y configuracion sensible =====
+config.php
+*.cnf
+mysql-*.cnf
+.env
+.env.*
+*.env
+credentials*
+*_secret*
+secret*
+
+# ===== Respaldos de base de datos =====
+*.sql
+*.sql.gz
+*.sql.zip
+*.dump
+
+# ===== Respaldos comprimidos =====
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.bz2
+*.gz
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Archivos temporales =====
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+*.bak
+.DS_Store
+
+# ===== Claves, tokens y certificados =====
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.token
+*.secret
+secrets/

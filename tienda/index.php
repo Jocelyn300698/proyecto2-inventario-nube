@@ -28,6 +28,43 @@ try {
     die('No se pudo conectar con la base de datos. Intente más tarde.');
 }
 
+// ---------- Icono visual por tipo de producto ----------
+// Se determina automáticamente según el código y el nombre del artículo,
+// sin necesidad de una columna nueva en MySQL. Si no coincide con ningún
+// tipo conocido se usa el icono predeterminado de caja.
+function icono_producto(string $texto): string
+{
+    // Comparaciones insensibles a mayúsculas sin depender de mbstring
+    // (stripos trabaja sobre bytes y cubre las palabras clave ASCII).
+    if (stripos($texto, 'laptop') !== false || stripos($texto, 'portatil') !== false) {
+        return '💻';
+    }
+    if (stripos($texto, 'teclado') !== false) {
+        return '⌨️';
+    }
+    if (stripos($texto, 'mouse') !== false) {
+        return '🖱️';
+    }
+    if (stripos($texto, 'audifono') !== false || stripos($texto, 'audífono') !== false) {
+        return '🎧';
+    }
+    if (stripos($texto, 'impresora') !== false) {
+        return '🖨️';
+    }
+    if (stripos($texto, 'webcam') !== false || stripos($texto, 'camara') !== false || stripos($texto, 'cámara') !== false) {
+        return '📷';
+    }
+    if (stripos($texto, 'monitor') !== false || stripos($texto, 'pantalla') !== false) {
+        return '🖥️';
+    }
+    // PC de escritorio (por nombre)
+    if (stripos($texto, 'escritorio') !== false || stripos($texto, 'pc de') !== false) {
+        return '🖥️';
+    }
+
+    return '📦';
+}
+
 // ---------- Leer los artículos del inventario (SOLO lectura) ----------
 $articulos = $pdo
     ->query("SELECT id, codigo, nombre, descripcion, cantidad, precio
@@ -106,7 +143,7 @@ $productos_json = json_encode(
                                     <span class="stock-badge stock-disponible">Disponible</span>
                                 <?php endif; ?>
 
-                                <div class="product-icon">📦</div>
+                                <div class="product-icon"><?= icono_producto($a['codigo'] . ' ' . $a['nombre']) ?></div>
                                 <h4><?= htmlspecialchars($a['nombre']) ?></h4>
                                 <p class="product-code"><?= htmlspecialchars($a['codigo']) ?></p>
                                 <p class="product-desc"><?= htmlspecialchars($a['descripcion'] ?? '—') ?></p>

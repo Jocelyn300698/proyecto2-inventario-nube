@@ -444,7 +444,10 @@ th {
     <div class="contenedor">
         <h1>Sistema de Gestión de Inventario</h1>
         <p class="subtitulo">Proyecto 2 · ITI-522 Computación en la Nube</p>
-        <p class="enlace-ver-tienda"><a class="btn btn-tienda" href="tienda/index.php">🛒 Ver tienda</a></p>
+        <p class="enlace-ver-tienda">
+            <a class="btn btn-tienda" href="tienda/index.php">🛒 Ver tienda</a>
+            <a class="btn btn-tienda" href="/tienda/">↩️ Volver a la tienda</a>
+        </p>
     </div>
 </header>
 

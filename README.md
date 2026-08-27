@@ -130,7 +130,7 @@ Tienda:
 
 ```text
 http://IP_PUBLICA/tienda/
-```
+```ss
 
 ## Repositorio
 
@@ -139,3 +139,12 @@ https://github.com/Jocelyn300698/proyecto2-inventario-nube
 ## Nota
 
 La base de datos MySQL se ejecuta directamente sobre la máquina virtual y no utiliza un servicio de base de datos administrado, de acuerdo con los requisitos del Proyecto 2.
+
+## Estado del proyecto
+Proyecto probado en entorno de producción sobre Azure, incluyendo prueba real de restauración de base de datos y verificación de acceso desde dispositivos móviles.
+
+## Integrantes
+* Jocelyn Carballo Castillo
+* Royner Gutiérrez Ugalde
+* Tatiana Urbina Arroliga
+* Camila Chaves Rojas

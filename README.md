@@ -1,6 +1,11 @@
 # Proyecto 2 - Sistema de Inventario en la Nube
 
 Proyecto desarrollado para el curso **Computación en la Nube - ITI-522**.
+Integrantes:
+Tatiana Urbina
+Jocelyn Carballo
+Royner Gutierrez
+Camila Chaves
 
 La solución corresponde a la evolución del Proyecto 1. Se mantiene la tienda de equipos de cómputo y se integra con un **Sistema de Gestión de Inventario**, utilizando una base de datos MySQL administrada dentro de una máquina virtual de Microsoft Azure.
 
